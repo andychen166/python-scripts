@@ -1,0 +1,28 @@
+#_*_coding utf-8 _*_
+def normalize(s):
+'''这个函数是用于对输入的字符串序列进行标准化，即输入的字符串，首字母大写，其他字母小写，比如输入列表['name', 'AGE','HEIght']到该函数，
+可以得到的输出结果是['Name', 'Age', 'Height']'''
+    listTemp = []
+    
+    for sm in s:
+        if sm[0].isupper():
+            sub = sm[0]        
+        elif sm[0].islower():           
+            sub = sm[0].upper()
+        else:
+            print('输入的首字符不是字母，请重新运行输入字符串')
+            return
+        for sub2 in sm[1:]:
+            if sub2.isupper():
+                sub = sub + sub2.lower()
+            elif sub2.islower():
+                sub = sub + sub2
+            else:
+                print('输入的字符包含非字母元素，请重新运行输入')
+                return
+        listTemp.append(sub)
+        sub = ''           
+
+    return listTemp
+
+       
