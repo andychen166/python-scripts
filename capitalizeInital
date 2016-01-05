@@ -1,0 +1,5 @@
+#_*_coding utf-8 _*_
+def normalize(s):
+'''这个文件是对输入的字母进行首字母大写，其他字母小写的处理，但是没有非字母处理的能力，直接调用了字符串的首字母大写函数'''
+    ls = list(map(str.capitalize,s))
+    return ls
