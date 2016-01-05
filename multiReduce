@@ -1,0 +1,8 @@
+from functools import reduce
+'''这个是用reduce计算乘积的简单做法'''
+def prod(l):
+    return reduce(multi,l)
+
+
+def multi(x,y):
+    return x * y
