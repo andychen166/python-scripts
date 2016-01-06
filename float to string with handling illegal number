@@ -1,5 +1,5 @@
 from functools import reduce
-'''浮点型字符串转换为浮点型数字'''
+'''浮点型字符串转换为浮点型数字，如果输入的不是数字，则程序退出'''
 def char2float(s):
     st = s.split('.') #把整个浮点数分为两部分，以.为分隔符
     if not(st[0].isdecimal() and st[1].isdecimal()):
