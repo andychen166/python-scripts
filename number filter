@@ -1,0 +1,16 @@
+#_*_ utf-8 _*_
+'''number filter'''
+def numFilter():
+    st = input('please input the strings that needs to be extracted: ')
+    st = ''.join(e for e in st if e.isalnum())
+    def stringStrip(m):
+        if m.isdigit():
+            return m
+    st = list(filter(stringStrip,st))
+    st = ''.join(st)
+    if st == '':
+        print('no number is in the input string')
+        return
+    else:
+        print(st)
+        return st
