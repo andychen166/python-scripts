@@ -1,6 +1,12 @@
+#_*_ utf-8 _*_
+'''parlindrome test: to test input is a parlindrome or not'''
 def is_parlindrome(n):
-'''this is method to test whether input number is a parlindrome or not'''
     str_n = str(n)
+    if str_n.isdecimal():
+        pass
+    else:
+        print('input is not a decimal number, please restart and try again ')
+        return
     list_n = list(str_n)
     list_n.reverse()
     num_n = map(str, list_n)
