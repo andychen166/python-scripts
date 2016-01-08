@@ -1,6 +1,7 @@
 #_*_ utf-8 _*_
-'''parlindrome test: to test input is a parlindrome or not'''
+'''parlindrome test: to test input is a parlindrome or not. BTW prlindrome number should be larger than 100 '''
 def is_parlindrome(n):
+##    print(n)
     str_n = str(n)
     if str_n.isdecimal():
         pass
@@ -12,9 +13,7 @@ def is_parlindrome(n):
     num_n = map(str, list_n)
     num_n = ''.join(num_n)
     num_n = int(num_n)
-    if num_n == n:
-        print('%d is parlindrome'%num_n)
-        return
+    if num_n == n and n >100:
+        return num_n
     else:
-        print('%d is not parlindrome'%num_n)
-        return 
+        pass
