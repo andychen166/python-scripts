@@ -1,0 +1,9 @@
+#_*_ utf-8 _*_
+'''parlindrome test: to test input is a parlindrome or not,just use the reversed and initial
+string to test '''
+def is_parlindrome(n):
+    str_n = str(n)
+    if str_n == str_n[::-1]:
+        return n
+    else:
+        pass
