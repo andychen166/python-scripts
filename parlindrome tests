@@ -1,4 +1,5 @@
 def is_parlindrome(n):
+'''this is method to test whether input number is a parlindrome or not'''
     str_n = str(n)
     list_n = list(str_n)
     list_n.reverse()
