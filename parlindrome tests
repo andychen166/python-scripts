@@ -1,0 +1,13 @@
+def is_parlindrome(n):
+    str_n = str(n)
+    list_n = list(str_n)
+    list_n.reverse()
+    num_n = map(str, list_n)
+    num_n = ''.join(num_n)
+    num_n = int(num_n)
+    if num_n == n:
+        print('%d is parlindrome'%num_n)
+        return
+    else:
+        print(print('%d is not parlindrome'%num_n))
+        return 
