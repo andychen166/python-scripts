@@ -16,5 +16,5 @@ def is_parlindrome(n):
         print('%d is parlindrome'%num_n)
         return
     else:
-        print(print('%d is not parlindrome'%num_n))
+        print('%d is not parlindrome'%num_n)
         return 
