@@ -1,0 +1,9 @@
+def log(func):
+## one star means the argument can be omit or more than one, two stars means such argument should be delivered with dictonary style
+    def wrapper(*arg, **kw):
+        print('call %s():' %func.__name__)
+        return func(*arg, **kw)
+    return wrapper
+@log
+def now():
+    print('2013-4-2')
