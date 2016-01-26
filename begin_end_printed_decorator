@@ -1,0 +1,12 @@
+def log(func):
+## this program is to print out begin and end call function statement before and after log function is called
+    def decorator(*args, **kw):
+        print("begin call")
+        func(*args, **kw)
+        print("end call")
+        return
+    return decorator
+
+@log
+def foo():
+    print("function of foo is called")
