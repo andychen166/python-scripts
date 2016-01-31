@@ -1,0 +1,4 @@
+from types import MethodType
+ s.set_age = MethodType(set_age, s)
+ s.set_age(43)
+ s.age
