@@ -1,0 +1,8 @@
+from datetime import datetime
+### this is to display file changed time and file names
+import os
+pwd = os.path.abspath('.')
+for f in os.listdir('.'):
+    fsize = os.path.getsize(f)
+    ftime = datetime.fromtimestamp(os.path.getmtime(f)).strftime('%y-%m-%d %H:%M')
+    print('%10d %s %s'%(fsize,ftime,f))
