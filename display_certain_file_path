@@ -1,0 +1,13 @@
+'''display files with path which contain certain strings or character'''
+import os
+strname = 'n'#the string can be setted as input('>')
+for folder, directory, files in os.walk(os.path.abspath('.')):
+    for f in files:
+        if strname in f:
+            m = os.path.join(folder,f)
+            print(m)
+            print(directory)
+            print('file %s'%files)
+##            print('---------------------')
+
+    
