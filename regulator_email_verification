@@ -1,0 +1,8 @@
+import re
+###testify email valid or not
+###
+re_email = re.compile(r'^(\w.+)@(\w+).(\w+)$')
+print('input email to be testified')
+email = input()
+t = re_email.match('chend.fas@ue.edu').groups()
+print(t)
