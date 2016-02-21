@@ -1,0 +1,7 @@
+##difference betweeen * and + is that * can be zero
+#while + should emerge at one time
+##to varify email style of <faf fas>chen@uw.edu
+re_email = re.compile(r'^(<\w*\s*\w*>)(\w*)@(\w*).(\w*)$')
+re_email = re.compile(r'^(<[\w\s]*>)(\w*)@(\w*).(\w*)$')
+t = re_email.match('<fa fafa>ft@uw.edu').groups()
+print(t)
