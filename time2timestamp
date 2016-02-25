@@ -1,0 +1,15 @@
+##input time and timezone,then change it into timestamp
+import re
+from datetime import datetime, timezone, timedelta
+ 
+def to_timestamp(dt_str, tz_str):
+    print('input time in the form of 2013-9-2 09:21:23')
+    dt_str = input()
+    print('input timezone in the form of UTC+9:00')
+    tz_str = input()
+    cur_time = datetime.strptime(dt_str,'%Y-%m-%d %H:%M:%S')
+    re_tz = re.match(r'^(UTC)([\+-]\d{1,2})\:00$',tz_str)
+    tf = int(re_tz.group(2))
+    tz = timezone(timedelta(hours=tf))
+    new_time = cur_time.replace(tzinfo=tz)
+    return new_time.timestamp()
